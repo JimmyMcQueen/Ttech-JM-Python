@@ -167,14 +167,6 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* === Iframes de ejecución === */
-iframe {
-  border: none;
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-  background-color: #fff;
-}
-
 /* === Responsive === */
 @media (max-width: 768px) {
   header h2 {
