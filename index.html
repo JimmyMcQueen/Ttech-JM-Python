@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ttech-JM-Python | Laboratorio 5</title>
+
+  <style>
+    /* === ESTILOS GLOBALES === */
+    :root {
+      --color-bg: #f9fafb;
+      --color-text: #111827;
+      --color-primary: #2563eb;
+      --color-secondary: #1e3a8a;
+      --color-card: #ffffff;
+      --shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      --radius: 12px;
+    }
+
+    body {
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      margin: 0;
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      color: var(--color-primary);
+      font-size: 2.2rem;
+      margin-bottom: 5px;
+      text-align: center;
+    }
+
+    h2 {
+      color: var(--color-secondary);
+      margin-top: 25px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      max-width: 700px;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    /* === TARJETAS === */
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    .card {
+      background: var(--color-card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 25px;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: var(--color-primary);
+    }
+
+    .card ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0 0;
+    }
+
+    .card ul li {
+      margin-bottom: 6px;
+    }
+
+    /* === ENLACES === */
+    a {
+      color: var(--color-primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* === FOOTER === */
+    footer {
+      margin-top: 50px;
+      font-size: 0.9rem;
+      color: #6b7280;
+      text-align: center;
+    }
+
+    footer strong {
+      color: var(--color-secondary);
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 16px;
+      border-radius: 8px;
+      background: var(--color-primary);
+      color: white;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: var(--color-secondary);
+    }
+
+    .header-logo {
+      background: var(--color-primary);
+      color: white;
+      padding: 12px 25px;
+      border-radius: var(--radius);
+      font-weight: bold;
+      box-shadow: var(--shadow);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header>
+    <div class="header-logo">Bootcamp Talentotech</div>
+    <h1>Ttech-JM-Python</h1>
+    <p><strong>Laboratorio 5</strong> — Actividades de Programación en Python.</p>
+  </header>
+
+  <!-- CONTENEDOR PRINCIPAL -->
+  <main class="container">
+    <section class="card">
+      <h3>📘 Actividad 1</h3>
+      <p>Fundamentos de Python: sintaxis básica, variables, condicionales, bucles, listas, diccionarios y scripts simples.</p>
+      <ul>
+        <li>Operaciones matemáticas</li>
+        <li>Condicionales y ciclos</li>
+        <li>Listas y diccionarios</li>
+        <li>Mini calculadora y juego de adivinanza</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h3>💾 Actividad 2</h3>
+      <p>Uso de bases de datos relacionales (SQLite): creación de tablas, inserción de datos y consultas SQL básicas.</p>
+      <ul>
+        <li>Tabla <code>Estudiantes</code></li>
+        <li>Insertar registros</li>
+        <li>Filtrar por ciudad</li>
+        <li>Consultar mayores de 20 años</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h3>🧩 Actividad 3</h3>
+      <p>Bases de datos NoSQL con MongoDB: creación de colección, inserción de documentos y consultas con filtros.</p>
+      <ul>
+        <li>Colección <code>Estudiantes</code></li>
+        <li>Insertar documentos JSON</li>
+        <li>Filtrar por ciudad</li>
+        <li>Consultar mayores de 20 años</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- SECCIÓN DE ENLACES -->
+  <section style="margin-top: 40px; text-align: center;">
+    <h2>🌐 Enlaces del proyecto</h2>
+    <p>
+      Repositorio en GitHub:  
+      <a href="https://github.com/JimmyMcQueen/Ttech-JM-Python" target="_blank">
+        github.com/JimmyMcQueen/Ttech-JM-Python
+      </a>
+    </p>
+    <p>
+      Visualiza este sitio en:  
+      <a href="https://jimmymcqueen.github.io/Ttech-JM-Python/" target="_blank" class="btn">
+        Abrir en GitHub Pages
+      </a>
+    </p>
+  </section>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <p>Creado por <strong>Jaime Martínez Cuellar</strong> | Bootcamp Talentotech</p>
+    <p>© 2025 — Ttech-JM-Python</p>
+  </footer>
+
+</body>
+</html>
