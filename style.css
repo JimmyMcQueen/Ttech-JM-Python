@@ -1,114 +1,191 @@
+/* 🎨 ==============================
+   Estilos globales — Ttech-JM-Python
+   =============================== */
+
+/* === Variables === */
 :root {
   --color-primary: #007bff;
   --color-secondary: #0056b3;
+  --color-bg: #f4f6fa;
   --color-text: #333;
-  --color-bg: #f8fafc;
-  --color-card: #fff;
-  --transition: 0.3s ease;
-  --radius: 12px;
+  --color-light: #fff;
+  --color-muted: #6b7280;
+  --transition: all 0.25s ease-in-out;
+  --radius: 1rem;
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* === Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   background-color: var(--color-bg);
   color: var(--color-text);
-  margin: 0;
-  padding: 0;
+  line-height: 1.6;
 }
 
+/* === Encabezado principal === */
 header {
+  background: var(--color-primary);
+  color: var(--color-light);
   text-align: center;
-  padding: 40px 20px;
-  background-color: var(--color-primary);
-  color: white;
-  border-bottom: 4px solid var(--color-secondary);
+  padding: 2.5rem 1rem;
+  box-shadow: var(--shadow);
 }
 
-h1 {
-  font-size: 1rem;
-  background: white;
-  color: var(--color-primary);
-  display: inline-block;
-  padding: 5px 12px;
-  border-radius: var(--radius);
+header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.4rem;
 }
 
-h2 {
-  font-size: 2rem;
-  margin: 10px 0;
+header h2 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
 }
 
+header p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* === Contenedor principal === */
 .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
-  padding: 40px;
+  gap: 2rem;
+  padding: 3rem 1rem;
 }
 
+/* === Tarjetas === */
 .card {
-  background-color: var(--color-card);
-  width: 320px;
+  background-color: var(--color-light);
   border-radius: var(--radius);
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform var(--transition);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  width: 320px;
+  transition: var(--transition);
 }
 
 .card:hover {
   transform: translateY(-6px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
 }
 
 .card h3 {
-  color: var(--color-primary);
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1rem;
 }
 
 .card ul {
   list-style-type: disc;
-  margin-left: 20px;
-  padding-left: 10px;
+  padding-left: 1.5rem;
+  text-align: left;
+  color: #444;
 }
 
-.btn, .btn-outline {
+.card li {
+  margin-bottom: 0.3rem;
+}
+
+/* === Botones === */
+.btn,
+.btn-outline {
   display: inline-block;
+  margin: 10px 5px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 0.95rem;
   text-decoration: none;
-  padding: 10px 15px;
-  border-radius: var(--radius);
-  font-weight: bold;
-  transition: var(--transition);
-  margin: 5px 5px 0 0;
+  transition: 
+  var(--transition);
 }
 
 .btn {
   background-color: var(--color-primary);
-  color: white;
+  color: #fff;
   border: none;
 }
 
 .btn:hover {
   background-color: var(--color-secondary);
+  transform: translateY(-2px);
 }
 
 .btn-outline {
-  border: 2px solid var(--color-primary);
   color: var(--color-primary);
-  background: transparent;
+  border: 2px solid var(--color-primary);
+  background-color: transparent;
 }
 
 .btn-outline:hover {
   background-color: var(--color-primary);
-  color: white;
+  color: #fff;
 }
 
+/* === Footer === */
 footer {
   text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-muted);
   margin-top: 40px;
-  padding: 30px 20px;
-  border-top: 1px solid rgba(0,0,0,0.1);
-  color: #6b7280;
+  padding: 30px 0;
+  border-top: 1px solid rgba(107, 114, 128, 0.2);
+  background-color: #fff;
+}
+
+footer h3 {
+  color: var(--color-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
 }
 
 footer a {
   color: var(--color-primary);
   text-decoration: none;
+  transition: var(--transition);
+}
+
+footer a:hover {
+  color: var(--color-secondary);
+  text-decoration: underline;
+}
+
+/* === Iframes de ejecución === */
+iframe {
+  border: none;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  background-color: #fff;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  header h2 {
+    font-size: 1.8rem;
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0.5rem;
+  }
+  .card {
+    width: 90%;
+  }
 }
