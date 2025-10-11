@@ -1,150 +1,114 @@
-/* === VARIABLES GLOBALES === */
 :root {
-  --color-bg: #f9fafb;
-  --color-text: #111827;
-  --color-primary: #2563eb;
-  --color-secondary: #1e3a8a;
-  --color-card: #ffffff;
-  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --color-primary: #007bff;
+  --color-secondary: #0056b3;
+  --color-text: #333;
+  --color-bg: #f8fafc;
+  --color-card: #fff;
+  --transition: 0.3s ease;
   --radius: 12px;
-  --transition: all 0.3s ease;
 }
 
-/* === MODO OSCURO AUTOMÁTICO === */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-bg: #0f172a;
-    --color-text: #e2e8f0;
-    --color-primary: #60a5fa;
-    --color-secondary: #1e40af;
-    --color-card: #1e293b;
-    --shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
-  }
-}
-
-/* === ESTILOS GENERALES === */
 body {
-  font-family: "Segoe UI", Roboto, Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--color-bg);
   color: var(--color-text);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-  transition: var(--transition);
-}
-
-/* === ENCABEZADO === */
-.header {
-  text-align: center;
-  padding: 50px 20px 20px;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-  color: white;
-  width: 100%;
-  box-shadow: var(--shadow);
-}
-
-.header h1 {
   margin: 0;
-  font-size: 2.4rem;
+  padding: 0;
 }
 
-.subtitle {
-  margin-top: 10px;
+header {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: var(--color-primary);
+  color: white;
+  border-bottom: 4px solid var(--color-secondary);
+}
+
+h1 {
   font-size: 1rem;
-}
-
-.tag {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
-  padding: 5px 12px;
-  font-size: 0.9rem;
+  background: white;
+  color: var(--color-primary);
   display: inline-block;
-  margin-top: 10px;
+  padding: 5px 12px;
+  border-radius: var(--radius);
 }
 
-/* === CONTENEDOR PRINCIPAL === */
+h2 {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
 .container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  margin-top: 40px;
-  max-width: 1000px;
-  padding: 0 20px;
-  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px;
 }
 
 .card {
-  background: var(--color-card);
+  background-color: var(--color-card);
+  width: 320px;
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 25px;
-  transition: var(--transition);
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform var(--transition);
 }
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-.card h2 {
+.card h3 {
   color: var(--color-primary);
-  margin-top: 0;
 }
 
 .card ul {
-  list-style: none;
-  padding-left: 0;
+  list-style-type: disc;
+  margin-left: 20px;
+  padding-left: 10px;
 }
 
-.card ul li::before {
-  content: "• ";
-  color: var(--color-primary);
-  font-weight: bold;
-}
-
-/* === ENLACES === */
-.links {
-  text-align: center;
-  margin-top: 40px;
-  padding: 0 20px;
-}
-
-.links a {
-  color: var(--color-primary);
+.btn, .btn-outline {
+  display: inline-block;
   text-decoration: none;
-  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: var(--radius);
+  font-weight: bold;
   transition: var(--transition);
-}
-
-.links a:hover {
-  color: var(--color-secondary);
-  text-decoration: underline;
+  margin: 5px 5px 0 0;
 }
 
 .btn {
-  display: inline-block;
   background-color: var(--color-primary);
   color: white;
-  padding: 10px 18px;
-  border-radius: 8px;
-  margin-top: 10px;
-  transition: var(--transition);
+  border: none;
 }
 
 .btn:hover {
   background-color: var(--color-secondary);
 }
 
-/* === PIE DE PÁGINA === */
+.btn-outline {
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background-color: var(--color-primary);
+  color: white;
+}
+
 footer {
   text-align: center;
-  font-size: 0.9rem;
+  margin-top: 40px;
+  padding: 30px 20px;
+  border-top: 1px solid rgba(0,0,0,0.1);
   color: #6b7280;
-  margin-top: 50px;
-  padding: 20px 0;
-  border-top: 1px solid rgba(107, 114, 128, 0.2);
-  width: 100%;
+}
+
+footer a {
+  color: var(--color-primary);
+  text-decoration: none;
 }
